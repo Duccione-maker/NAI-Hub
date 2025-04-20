@@ -1,0 +1,351 @@
+/* SupportoLinguistico.css - Stili per il componente di supporto linguistico */
+
+/* Variabili colori e tema */
+:root {
+    --primary-color: #4a6da7;
+    --primary-light: #7290c9;
+    --primary-dark: #2a4b85;
+    --accent-color: #f9a826;
+    --text-color: #333333;
+    --background-color: #f0f2f5;
+    --card-background: #ffffff;
+    --border-color: #dadce0;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --error-color: #f44336;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Widget di supporto linguistico */
+  .supporto-linguistico-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    z-index: 1000;
+    border: 1px solid var(--border-color);
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .supporto-linguistico-widget.minimized {
+    width: 200px;
+    max-height: 60px;
+  }
+  
+  /* Header del widget */
+  .supporto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .supporto-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .toggle-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .livello-select {
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+  }
+  
+  /* Contenuto del widget */
+  .supporto-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    flex-grow: 1;
+    background-color: var(--card-background);
+  }
+  
+  /* Tabs di navigazione */
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .tabs button {
+    background: none;
+    border: none;
+    padding: 10px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: var(--transition);
+    color: var(--text-color);
+  }
+  
+  .tabs button.active {
+    border-bottom: 3px solid var(--accent-color);
+    font-weight: 500;
+  }
+  
+  .tabs button:hover:not(.active) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Viste specifiche */
+  .glossario-view,
+  .frasi-view,
+  .regole-view,
+  .suggerimenti-view,
+  .errori-view {
+    padding: 15px;
+  }
+  
+  .glossario-view h4,
+  .frasi-view h4,
+  .regole-view h4,
+  .suggerimenti-view h4,
+  .errori-view h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: var(--primary-dark);
+  }
+  
+  /* Ricerca nel glossario */
+  .glossario-search {
+    margin-bottom: 15px;
+  }
+  
+  .glossario-search input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+  }
+  
+  /* Lista elementi del glossario */
+  .glossario-list {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .glossario-item,
+  .frase-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .glossario-item:last-child,
+  .frase-item:last-child {
+    border-bottom: none;
+  }
+  
+  .italiano-termine,
+  .traduzione-termine,
+  .italiano-frase,
+  .traduzione-frase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .italiano-termine,
+  .italiano-frase {
+    font-weight: 500;
+    color: var(--primary-dark);
+  }
+  
+  .traduzione-termine,
+  .traduzione-frase {
+    color: var(--text-color);
+    font-style: italic;
+  }
+  
+  .audio-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 2px;
+    opacity: 0.7;
+    transition: var(--transition);
+  }
+  
+  .audio-button:hover {
+    opacity: 1;
+  }
+  
+  /* Liste per regole e suggerimenti */
+  .regole-list,
+  .suggerimenti-list,
+  .errori-list {
+    padding-left: 25px;
+    margin: 0;
+  }
+  
+  .regola-item,
+  .suggerimento-item,
+  .errore-item {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  .errore-item {
+    color: var(--error-color);
+  }
+  
+  /* Footer del widget */
+  .supporto-footer {
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+  }
+  
+  .lingua-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .lingua-selector label {
+    font-size: 14px;
+    color: var(--text-color);
+  }
+  
+  .lingua-selector select {
+    padding: 5px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .close-button {
+    padding: 6px 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .close-button:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  /* Messaggio nessun risultato */
+  .nessun-risultato {
+    text-align: center;
+    color: var(--text-color);
+    font-style: italic;
+    padding: 15px 0;
+  }
+  
+  /* Pulsante trigger globale */
+  .supporto-trigger-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    z-index: 999;
+    transition: var(--transition);
+    font-weight: 500;
+  }
+  
+  .supporto-trigger-button:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  /* Stile per supporto provider */
+  .supporto-provider {
+    position: relative;
+  }
+  
+  /* Media queries per responsive */
+  @media (max-width: 768px) {
+    .supporto-linguistico-widget {
+      width: 300px;
+      bottom: 10px;
+      right: 10px;
+    }
+    
+    .supporto-linguistico-widget.minimized {
+      width: 180px;
+    }
+    
+    .tabs button {
+      padding: 8px 10px;
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .supporto-linguistico-widget {
+      width: calc(100% - 20px);
+      bottom: 10px;
+      right: 10px;
+      left: 10px;
+    }
+    
+    .supporto-linguistico-widget.minimized {
+      width: 150px;
+      right: 10px;
+      left: auto;
+    }
+    
+    .supporto-trigger-button {
+      padding: 8px 10px;
+      font-size: 14px;
+      bottom: 10px;
+      right: 10px;
+    }
+  }

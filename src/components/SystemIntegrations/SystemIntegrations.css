@@ -1,0 +1,301 @@
+/* SystemIntegrations.css */
+.system-integrations {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .system-integrations h2 {
+    color: #2c5282;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  .integration-intro {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #4a5568;
+  }
+  
+  .integrations-tabs {
+    display: flex;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+  }
+  
+  .integration-tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    margin-right: 5px;
+    background-color: #f7fafc;
+  }
+  
+  .integration-tab.active {
+    background-color: white;
+    border-color: #e2e8f0;
+    color: #4a90e2;
+    font-weight: 500;
+  }
+  
+  .integration-content {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+  }
+  
+  /* Form for adding integrations */
+  .integration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border-radius: 6px;
+  }
+  
+  .integration-form h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #2d3748;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .form-group {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4a5568;
+    font-weight: 500;
+  }
+  
+  .form-group select,
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+  }
+  
+  .connect-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .connect-button:hover {
+    background-color: #357abD;
+  }
+  
+  .test-connection {
+    background-color: #e2e8f0;
+    color: #4a5568;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .test-connection:hover {
+    background-color: #cbd5e0;
+  }
+  
+  /* Connected systems */
+  .connected-systems {
+    margin-top: 30px;
+  }
+  
+  .connected-systems h3 {
+    color: #2d3748;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .systems-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .system-card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    position: relative;
+  }
+  
+  .system-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .system-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #f7fafc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .system-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2d3748;
+  }
+  
+  .system-info {
+    margin-bottom: 15px;
+  }
+  
+  .system-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #718096;
+  }
+  
+  .system-status {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .status-active {
+    background-color: #48bb78;
+  }
+  
+  .status-inactive {
+    background-color: #ed8936;
+  }
+  
+  .status-error {
+    background-color: #f56565;
+  }
+  
+  .status-text {
+    font-size: 0.85rem;
+    color: #4a5568;
+  }
+  
+  .system-actions {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .system-action {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #718096;
+    font-size: 1.1rem;
+    padding: 0;
+    margin-left: 5px;
+  }
+  
+  .system-action:hover {
+    color: #4a5568;
+  }
+  
+  .no-systems {
+    color: #718096;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+  }
+  
+  /* API Key field */
+  .api-key-field {
+    position: relative;
+  }
+  
+  .api-key-input {
+    padding-right: 40px !important;
+  }
+  
+  .show-key-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #718096;
+    cursor: pointer;
+  }
+  
+  .integration-help {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    color: #718096;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .integrations-tabs {
+      flex-wrap: wrap;
+    }
+    
+    .integration-tab {
+      flex-grow: 1;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    
+    .form-row {
+      flex-direction: column;
+    }
+    
+    .form-actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .test-connection, .connect-button {
+      width: 100%;
+      margin-right: 0;
+    }
+  }

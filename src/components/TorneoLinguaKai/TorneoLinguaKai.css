@@ -1,0 +1,908 @@
+/* TorneoLinguaKai.css - Stili per il componente del torneo */
+
+/* Variabili colori e tema */
+:root {
+    --primary-color: #e63946;
+    --primary-light: #f8a3ac;
+    --primary-dark: #b02a33;
+    --secondary-color: #4a6da7;
+    --secondary-light: #7290c9;
+    --secondary-dark: #2a4b85;
+    --accent-color: #ffd700;
+    --text-color: #333333;
+    --background-color: #f5f5f5;
+    --card-background: #ffffff;
+    --border-color: #dadce0;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --error-color: #f44336;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Layout principale */
+  .torneo-lingua-kai {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80vh;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .torneo-content {
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  /* Banner del torneo */
+  .banner-torneo {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .banner-torneo h1 {
+    font-size: 36px;
+    margin: 0 0 10px 0;
+  }
+  
+  .banner-torneo p {
+    font-size: 18px;
+    margin: 0;
+    opacity: 0.9;
+  }
+  
+  /* Selezione modalità */
+  .selezione-modalita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .opzioni-modalita {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+    width: 100%;
+  }
+  
+  .modalita-card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .modalita-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modalita-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+  
+  .modalita-card h3 {
+    margin: 0 0 15px 0;
+    color: var(--primary-color);
+  }
+  
+  .modalita-card p {
+    margin: 0;
+    color: var(--text-color);
+  }
+  
+  /* Sfida della settimana */
+  .sfida-settimana {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    margin: 30px 0;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px dashed var(--accent-color);
+    transition: var(--transition);
+  }
+  
+  .sfida-settimana:hover {
+    background-color: #fffdf5;
+    transform: scale(1.02);
+  }
+  
+  .sfida-settimana-banner {
+    margin-bottom: 15px;
+  }
+  
+  .sfida-settimana h3 {
+    margin: 0;
+    color: var(--primary-dark);
+  }
+  
+  .sfida-settimana h4 {
+    margin: 10px 0;
+    color: var(--primary-color);
+    font-size: 22px;
+  }
+  
+  .sfida-settimana p {
+    margin: 0 0 20px 0;
+    color: var(--text-color);
+  }
+  
+  /* Altre opzioni */
+  .altre-opzioni {
+    margin-top: 20px;
+  }
+  
+  /* Selezione categoria */
+  .selezione-categoria {
+    text-align: center;
+  }
+  
+  .selezione-categoria h2 {
+    margin-bottom: 30px;
+    color: var(--primary-color);
+  }
+  
+  .categorie-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .categoria-card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .categoria-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .categoria-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .categoria-card h3 {
+    margin: 0 0 10px 0;
+    color: var(--secondary-color);
+  }
+  
+  .categoria-card p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-color);
+  }
+  
+  /* Selezione livello */
+  .selezione-livello {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .selezione-livello h3 {
+    margin-top: 0;
+    color: var(--secondary-dark);
+  }
+  
+  .livelli-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .livello-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-light);
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .livello-btn:hover {
+    background-color: var(--secondary-dark);
+  }
+  
+  /* Selezione battaglia */
+  .selezione-battaglia {
+    text-align: center;
+  }
+  
+  .selezione-battaglia h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  .opzioni-battaglia {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+  }
+  
+  /* Header della sfida */
+  .sfida-header {
+    background-color: var(--card-background);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+  }
+  
+  .sfida-info {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .categoria-badge, .livello-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .categoria-badge {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+  }
+  
+  .livello-badge {
+    background-color: var(--secondary-light);
+    color: var(--secondary-dark);
+  }
+  
+  .sfida-progress {
+    flex-grow: 1;
+    margin: 0 20px;
+    max-width: 300px;
+  }
+  
+  .progress-text {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background-color: var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+  }
+  
+  .sfida-counters {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .punteggio, .timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .label {
+    font-size: 12px;
+    color: var(--text-color);
+  }
+  
+  .valore {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .timer .valore {
+    font-family: monospace;
+  }
+  
+  .avversario-info {
+    padding: 5px 10px;
+    background-color: var(--primary-light);
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--primary-dark);
+  }
+  
+  /* Contenitore della sfida */
+  .sfida-container {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    margin: 20px 0;
+  }
+  
+  .sfida-testo {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+  }
+  
+  .sfida-testo h4 {
+    margin-top: 0;
+    color: var(--secondary-dark);
+  }
+  
+  .sfida-testo p {
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+  
+  .sfida-domanda h3 {
+    color: var(--primary-dark);
+    font-size: 22px;
+    margin-top: 0;
+  }
+  
+  .sfida-opzioni {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px 0;
+  }
+  
+  .opzione-btn {
+    padding: 15px 20px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .opzione-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .opzione-btn.corretta {
+    background-color: rgba(76, 175, 80, 0.2);
+    border-color: var(--success-color);
+  }
+  
+  .opzione-btn.errata {
+    background-color: rgba(244, 67, 54, 0.2);
+    border-color: var(--error-color);
+  }
+  
+  /* Abbinamento */
+  .abbinamento-container {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .colonna-chiavi, .colonna-valori {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .abbinamento-item {
+    padding: 15px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .abbinamento-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Risultato della risposta */
+  .risultato {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: var(--border-radius);
+  }
+  
+  .risultato.corretto {
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid var(--success-color);
+  }
+  
+  .risultato.errato {
+    background-color: rgba(244, 67, 54, 0.1);
+    border: 1px solid var(--error-color);
+  }
+  
+  .risultato h4 {
+    margin-top: 0;
+    color: var(--primary-dark);
+  }
+  
+  .risultato p {
+    margin-bottom: 20px;
+  }
+  
+  /* Risultato finale */
+  .risultato-finale {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .risultato-finale h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+  }
+  
+  .sfida-avversario-risultato {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin: 20px 0;
+  }
+  
+  .confronto-risultati {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .risultato-giocatore, .risultato-avversario {
+    padding: 15px;
+    width: 40%;
+  }
+  
+  .vs {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-dark);
+  }
+  
+  .punteggio-grande {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--primary-dark);
+  }
+  
+  .risultato-vittoria {
+    font-size: 24px;
+    color: var(--primary-color);
+  }
+  
+  .statistiche {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .statistica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+  }
+  
+  .commento-finale {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin: 20px 0;
+  }
+  
+  .azioni-finali {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  /* Overlay classifica */
+  .classifica-overlay, .avversari-overlay, .sfida-settimana-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .classifica-container, .avversari-container, .sfida-settimana-dettaglio {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .classifica-container h2, .avversari-container h2, .sfida-settimana-dettaglio h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  /* Tabella classifica */
+  .classifica-tabella {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .classifica-header {
+    display: flex;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    font-weight: bold;
+  }
+  
+  .classifica-riga {
+    display: flex;
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+  }
+  
+  .classifica-riga:last-child {
+    border-bottom: none;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+  }
+  
+  .classifica-riga.top-player {
+    background-color: rgba(255, 215, 0, 0.1);
+  }
+  
+  .classifica-pos {
+    width: 10%;
+    text-align: center;
+  }
+  
+  .classifica-giocatore {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .avatar {
+    font-size: 20px;
+  }
+  
+  .classifica-livello {
+    width: 20%;
+  }
+  
+  .classifica-punteggio, .classifica-vittorie {
+    width: 15%;
+    text-align: center;
+  }
+  
+  .premio-settimanale {
+    background-color: #fff9e6;
+    border: 1px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .premio-settimanale h3 {
+    color: var(--primary-dark);
+    margin-top: 0;
+  }
+  
+  /* Griglia avversari */
+  .avversari-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .avversario-card {
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .avversario-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .avversario-avatar {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+  
+  .avversario-card h3 {
+    margin: 10px 0;
+    color: var(--secondary-dark);
+  }
+  
+  .avversario-stats {
+    margin: 15px 0;
+  }
+  
+  .stat {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .btn-sfida {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .btn-sfida:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  /* Dettagli sfida settimana */
+  .nome-sfida {
+    color: var(--primary-color);
+    font-size: 26px;
+    margin: 10px 0 20px;
+    text-align: center;
+  }
+  
+  .sfida-settimana-info {
+    margin: 20px 0;
+  }
+  
+  .descrizione {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .sfida-dettagli {
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin: 20px 0;
+  }
+  
+  .dettaglio {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .dettaglio:last-child {
+    border-bottom: none;
+  }
+  
+  .premio-sfida {
+    background-color: #fff9e6;
+    border: 1px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin: 20px 0;
+  }
+  
+  .premio-sfida h4 {
+    color: var(--primary-dark);
+    margin-top: 0;
+  }
+  
+  .azioni-sfida {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  /* Pulsanti */
+  .btn-action {
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+  }
+  
+  .btn-action:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .btn-secondary {
+    padding: 12px 24px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--secondary-dark);
+  }
+  
+  .btn-next {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: var(--transition);
+  }
+  
+  .btn-next:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .btn-back {
+    padding: 8px 16px;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 20px;
+    transition: var(--transition);
+  }
+  
+  .btn-back:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .btn-close {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    transition: var(--transition);
+  }
+  
+  .btn-close:hover {
+    background-color: var(--secondary-dark);
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .opzioni-modalita {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .modalita-card {
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    .categorie-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .categoria-card {
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    .sfida-header {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .sfida-progress {
+      margin: 10px 0;
+      max-width: none;
+      width: 100%;
+    }
+    
+    .confronto-risultati {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .risultato-giocatore, .risultato-avversario {
+      width: 100%;
+    }
+    
+    .vs {
+      margin: 10px 0;
+    }
+    
+    .azioni-finali, .opzioni-battaglia {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .sfida-counters {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .abbinamento-container {
+      flex-direction: column;
+    }
+    
+    .classifica-header, .classifica-riga {
+      font-size: 14px;
+    }
+    
+    .avatar {
+      font-size: 16px;
+    }
+    
+    .avversari-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }

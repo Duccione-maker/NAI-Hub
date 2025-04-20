@@ -1,0 +1,63 @@
+.accessibility-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .accessibility-page h2 {
+    color: #2c5282;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .accessibility-intro {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #4a5568;
+    font-size: 1.1rem;
+  }
+  
+  .accessibility-section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .accessibility-section h3 {
+    color: #2d3748;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .accessibility-section p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .accessibility-help {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ebf8ff;
+    border-radius: 8px;
+    border-left: 4px solid #4299e1;
+  }
+  
+  .accessibility-help h3 {
+    color: #2c5282;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .accessibility-help a {
+    color: #3182ce;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .accessibility-help a:hover {
+    text-decoration: underline;
+  }

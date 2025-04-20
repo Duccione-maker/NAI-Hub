@@ -1,0 +1,381 @@
+/* SezionePunteggiatura.css - Stili per il componente degli esercizi di punteggiatura */
+
+/* Variabili colori e tema */
+:root {
+    --primary-color: #4a6da7;
+    --primary-light: #7290c9;
+    --primary-dark: #2a4b85;
+    --accent-color: #f9a826;
+    --text-color: #333333;
+    --background-color: #f5f7fa;
+    --card-bg: #ffffff;
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+    --warning-color: #f39c12;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Container principale */
+  .sezione-punteggiatura-container {
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Header della sezione */
+  .punteggiatura-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 15px;
+  }
+  
+  .punteggiatura-header h2 {
+    color: var(--primary-dark);
+    margin: 0;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .punteggiatura-header h2::before {
+    content: "✒️";
+    margin-right: 10px;
+    font-size: 1.6rem;
+  }
+  
+  /* Selettore livello */
+  .level-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .level-selector label {
+    font-weight: 500;
+  }
+  
+  .level-selector select {
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary-light);
+    background-color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    transition: var(--transition);
+  }
+  
+  .level-selector select:focus,
+  .level-selector select:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(74, 109, 167, 0.2);
+  }
+  
+  .level-selector select:disabled {
+    background-color: #e9e9e9;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  /* Container esercizio */
+  .exercise-container {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Istruzioni dell'esercizio */
+  .exercise-instructions {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  .exercise-instructions p {
+    margin: 0 0 10px;
+  }
+  
+  /* Pulsante audio */
+  .audio-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+    margin-top: 10px;
+  }
+  
+  .audio-btn:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .audio-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .audio-btn i {
+    font-size: 1rem;
+  }
+  
+  /* Testo da correggere */
+  .raw-text {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: var(--border-radius);
+  }
+  
+  .raw-text h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+    font-size: 1.1rem;
+  }
+  
+  .raw-text p {
+    margin: 0;
+    line-height: 1.6;
+    font-family: monospace;
+    font-size: 1.1rem;
+    white-space: pre-wrap;
+  }
+  
+  /* Editor di testo */
+  .text-editor-container {
+    margin-bottom: 20px;
+  }
+  
+  .text-editor-container h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+    font-size: 1.1rem;
+  }
+  
+  .punctuation-editor {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    resize: vertical;
+    font-family: monospace;
+    transition: var(--transition);
+  }
+  
+  .punctuation-editor:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(74, 109, 167, 0.2);
+  }
+  
+  .punctuation-editor:disabled {
+    background-color: #f9f9f9;
+    cursor: not-allowed;
+  }
+  
+  .editor-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+  }
+  
+  /* Testo corretto */
+  .correct-text {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: rgba(46, 204, 113, 0.1);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--success-color);
+  }
+  
+  .correct-text h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--success-color);
+    font-size: 1.1rem;
+  }
+  
+  .correct-text p {
+    margin: 0;
+    line-height: 1.6;
+    font-family: monospace;
+    font-size: 1.1rem;
+    white-space: pre-wrap;
+  }
+  
+  /* Feedback */
+  .punteggiatura-feedback {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .feedback-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .score-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .score-label {
+    font-weight: 500;
+    color: var(--primary-dark);
+  }
+  
+  .feedback-details {
+    margin-bottom: 20px;
+  }
+  
+  .errors-section, .suggestions-section {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+  }
+  
+  .errors-section {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left: 4px solid var(--error-color);
+  }
+  
+  .suggestions-section {
+    background-color: rgba(249, 168, 38, 0.1);
+    border-left: 4px solid var(--accent-color);
+  }
+  
+  .errors-section h4, .suggestions-section h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .errors-section h4 {
+    color: var(--error-color);
+  }
+  
+  .suggestions-section h4 {
+    color: var(--accent-color);
+  }
+  
+  .errors-section ul, .suggestions-section ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .errors-section li, .suggestions-section li {
+    margin-bottom: 5px;
+  }
+  
+  .feedback-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Pulsante principale */
+  .primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+  }
+  
+  .primary-btn:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .primary-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .primary-btn i {
+    font-size: 1rem;
+  }
+  
+  /* Indicatore di caricamento */
+  .loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: var(--primary-color);
+    font-style: italic;
+  }
+  
+  .loading-indicator::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    border: 3px solid var(--primary-light);
+    border-radius: 50%;
+    border-top-color: var(--primary-dark);
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Media queries per responsive */
+  @media (max-width: 768px) {
+    .punteggiatura-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .level-selector {
+      width: 100%;
+    }
+    
+    .level-selector select {
+      flex-grow: 1;
+    }
+  }

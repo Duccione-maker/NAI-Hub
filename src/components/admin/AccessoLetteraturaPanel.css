@@ -1,0 +1,398 @@
+/* src/components/admin/AccessoLetteraturaPanel.css */
+.accesso-letteratura-panel {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+  
+  .accesso-letteratura-panel h2 {
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid #cc9900;
+    padding-bottom: 10px;
+  }
+  
+  .messaggio-successo, .messaggio-errore {
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .messaggio-successo {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  .messaggio-errore {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Stili per la sezione requisiti */
+  .requisiti-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .requisiti-section h3 {
+    color: #5d4037;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  
+  .requisiti-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .requisiti-list {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .requisito-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .requisito-label {
+    font-weight: bold;
+    color: #5d4037;
+    margin-right: 10px;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .requisito-value {
+    color: #666;
+  }
+  
+  .requisito-item input, .requisito-item select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100px;
+    margin-left: 10px;
+  }
+  
+  .requisito-item select {
+    width: 150px;
+  }
+  
+  .requisiti-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-modifica-requisiti, .btn-salva-requisiti, .btn-annulla-requisiti {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    margin: 0 5px;
+  }
+  
+  .btn-modifica-requisiti {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .btn-modifica-requisiti:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .btn-salva-requisiti {
+    background-color: #cc9900;
+    color: white;
+  }
+  
+  .btn-salva-requisiti:hover {
+    background-color: #b38800;
+  }
+  
+  .btn-annulla-requisiti {
+    background-color: #f8f8f8;
+    color: #666;
+    border: 1px solid #ddd;
+  }
+  
+  .btn-annulla-requisiti:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Stili per la sezione di accesso */
+  .accesso-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .accesso-section h3 {
+    color: #5d4037;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  
+  .accesso-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .search-container {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 5px 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-result-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-result-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .search-result-item.selected {
+    background-color: #f2e8d5;
+  }
+  
+  .student-name {
+    font-weight: 500;
+  }
+  
+  .student-class {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .check-icon {
+    color: #cc9900;
+    font-weight: bold;
+  }
+  
+  .class-selector {
+    min-width: 300px;
+    flex: 1;
+  }
+  
+  .class-select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: white;
+  }
+  
+  .select-all-container {
+    margin-top: 15px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .select-all-container label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .select-all-container input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  /* Stili per la lista studenti */
+  .studenti-lista {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .studenti-lista h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #5d4037;
+  }
+  
+  .studenti-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .studente-card {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #eee;
+  }
+  
+  .studente-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .studente-card.selected {
+    background-color: #f2e8d5;
+    border-color: #d0b27a;
+  }
+  
+  .studente-info {
+    flex: 1;
+  }
+  
+  .studente-nome {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .studente-level {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .accesso-concesso {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+  /* Stili per la sezione di concessione accesso */
+  .concedi-accesso-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .btn-concedi-accesso {
+    background-color: #cc9900;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+  }
+  
+  .btn-concedi-accesso:hover {
+    background-color: #b38800;
+  }
+  
+  .btn-concedi-accesso:disabled {
+    background-color: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+  }
+  
+  .studenti-selezionati-counter {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .requisiti-container {
+      flex-direction: column;
+    }
+    
+    .requisiti-actions {
+      margin-top: 20px;
+    }
+    
+    .accesso-controls {
+      flex-direction: column;
+    }
+    
+    .search-container, .class-selector {
+      width: 100%;
+    }
+    
+    .studenti-grid {
+      grid-template-columns: 1fr;
+    }
+  }

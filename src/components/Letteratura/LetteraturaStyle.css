@@ -1,0 +1,150 @@
+/* src/components/Letteratura/LetteraturaStyle.css */
+.letteratura {
+  position: relative;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  color: #333333;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.section-title::before {
+  content: "⛩️";
+  margin-right: 10px;
+}
+
+.progress-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.progress-info {
+  margin-top: 15px;
+  color: #555;
+}
+
+.category-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.category-btn {
+  background-color: #f0f0e8;
+  border: none;
+  padding: 10px 25px;
+  margin: 0 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.category-btn.active {
+  background-color: #CCAA00;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testi-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.testo-card {
+  position: relative;
+  padding: 20px;
+  border-left: 4px solid #CCAA00;
+}
+
+.testo-titolo {
+  font-size: 1.3rem;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.testo-autore {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0 0 15px 0;
+  color: #555;
+}
+
+.testo-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.testo-periodo {
+  background-color: #f0f0e8;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.testo-difficolta {
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: white;
+}
+
+.livello-1 {
+  background-color: #27ae60;
+}
+
+.livello-2 {
+  background-color: #3498db;
+}
+
+.livello-3 {
+  background-color: #8b4513;
+}
+
+.testo-estratto {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-style: italic;
+  color: #555;
+}
+
+.testo-temi {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  gap: 8px;
+}
+
+.tema-tag {
+  background-color: rgba(204, 170, 0, 0.1);
+  color: #333;
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.no-testi-message {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Stile responsive */
+@media (max-width: 768px) {
+  .testi-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-btn {
+    padding: 8px 15px;
+  }
+}

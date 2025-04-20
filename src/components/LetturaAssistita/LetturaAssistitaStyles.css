@@ -1,0 +1,314 @@
+/* LetturaAssistitaStyles.css - Stili per il componente di lettura assistita */
+
+/* Variabili colori e tema */
+:root {
+    --primary-color: #4a6da7;
+    --primary-light: #7290c9;
+    --primary-dark: #2a4b85;
+    --accent-color: #f9a826;
+    --text-color: #333333;
+    --background-color: #f5f7fa;
+    --card-bg: #ffffff;
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Stili generali del container */
+  .lettura-assistita-container {
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Header della sezione */
+  .lettura-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 15px;
+  }
+  
+  .lettura-header h2 {
+    color: var(--primary-dark);
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  /* Selettore livello di difficoltà */
+  .level-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .level-selector label {
+    font-weight: 500;
+  }
+  
+  .level-selector select {
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary-light);
+    background-color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    transition: var(--transition);
+  }
+  
+  .level-selector select:focus,
+  .level-selector select:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(74, 109, 167, 0.2);
+  }
+  
+  /* Container del testo */
+  .text-container {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .text-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .reading-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+    min-height: 200px;
+  }
+  
+  /* Loader per generazione testo */
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: var(--primary-color);
+    font-style: italic;
+  }
+  
+  .loading-spinner::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    border: 3px solid var(--primary-light);
+    border-radius: 50%;
+    border-top-color: var(--primary-dark);
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Sezione audio */
+  .audio-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .model-audio, .user-recording {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .model-audio h3, .user-recording h3 {
+    color: var(--primary-dark);
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .audio-player {
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .recording-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Indicatore di registrazione */
+  .recording-indicator {
+    display: inline-block;
+    color: var(--error-color);
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+  }
+  
+  /* Sezione feedback AI */
+  .feedback-section {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+  }
+  
+  .feedback-section h3 {
+    color: var(--primary-dark);
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .ai-feedback {
+    padding: 15px;
+  }
+  
+  /* Stile per il feedback dettagliato */
+  .feedback-overview {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .accuracy-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .score-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-details {
+    flex: 1;
+  }
+  
+  .feedback-details p {
+    margin: 8px 0;
+  }
+  
+  .feedback-errors h4, .feedback-suggestions h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  .feedback-errors ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .feedback-errors li {
+    display: inline-block;
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--error-color);
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 4px;
+    border-left: 3px solid var(--error-color);
+  }
+  
+  .feedback-suggestions p {
+    background-color: rgba(46, 204, 113, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    border-left: 3px solid var(--success-color);
+  }
+  
+  /* Pulsanti */
+  .primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+  }
+  
+  .primary-btn:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .primary-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .primary-btn i {
+    font-size: 1rem;
+  }
+  
+  /* Messaggi simulazione */
+  .simulation-message {
+    background-color: rgba(243, 156, 18, 0.1);
+    color: var(--warning-color);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border-left: 3px solid var(--warning-color);
+    font-style: italic;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .lettura-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .audio-section {
+      grid-template-columns: 1fr;
+    }
+    
+    .feedback-overview {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .accuracy-score {
+      margin-bottom: 20px;
+    }
+  }

@@ -1,0 +1,190 @@
+/* NormativeCompliance.css */
+.normative-compliance {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .normative-compliance h2 {
+    color: #2c5282;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .normative-compliance h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #4a90e2;
+  }
+  
+  .compliance-intro {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #4a5568;
+    line-height: 1.6;
+  }
+  
+  .compliance-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .compliance-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+  }
+  
+  .compliance-section.ddi::before {
+    background-color: #4c51bf;
+  }
+  
+  .compliance-section.technology::before {
+    background-color: #48bb78;
+  }
+  
+  .compliance-section.data-protection::before {
+    background-color: #ed8936;
+  }
+  
+  .compliance-section.accessibility::before {
+    background-color: #f56565;
+  }
+  
+  .compliance-section.training::before {
+    background-color: #9f7aea;
+  }
+  
+  .compliance-section h3 {
+    color: #2d3748;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .section-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .compliance-section p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .compliance-details {
+    background-color: #f8fafc;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  .compliance-details h4 {
+    color: #4a5568;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .details-list {
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .details-list li {
+    margin-bottom: 5px;
+    color: #718096;
+  }
+  
+  .compliance-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  .compliance-link:hover {
+    color: #2c5282;
+    text-decoration: underline;
+  }
+  
+  .compliance-footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #718096;
+    font-size: 0.9rem;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .compliance-footer a {
+    color: #4a90e2;
+    text-decoration: none;
+  }
+  
+  .compliance-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .policy-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .download-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease;
+  }
+  
+  .download-button:hover {
+    background-color: #357abD;
+  }
+  
+  .download-icon {
+    margin-right: 8px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .normative-compliance {
+      padding: 15px;
+    }
+    
+    .compliance-section {
+      padding: 15px;
+    }
+    
+    .compliance-details {
+      padding: 10px;
+    }
+  }

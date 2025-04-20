@@ -1,0 +1,208 @@
+.test-ingresso-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .test-description {
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .progress-tracker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .progress-step {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    color: #6c757d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+  }
+  
+  .progress-step.active {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .progress-line {
+    height: 3px;
+    width: 60px;
+    background-color: #e9ecef;
+    margin: 0 10px;
+  }
+  
+  .test-step {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .options-grid, .language-grid, .images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .images-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .options-grid button, .language-grid button, .images-grid button {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #495057;
+    transition: all 0.3s;
+    text-align: center;
+  }
+  
+  .images-grid button {
+    font-size: 2.5rem;
+    padding: 1.5rem;
+  }
+  
+  .options-grid button:hover, .language-grid button:hover, .images-grid button:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+  }
+  
+  .options-grid button.selected, .language-grid button.selected, .images-grid button.selected {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+  }
+  
+  .step-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .next-button, .back-button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  .next-button {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .next-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .next-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  .back-button {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #e9ecef;
+  }
+  
+  .back-button:hover {
+    background-color: #e9ecef;
+  }
+  
+  .reading-test, .grammar-test, .visual-test {
+    margin-bottom: 2rem;
+  }
+  
+  .reading-text {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .test-sentence {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+  }
+  
+  .blank {
+    display: inline-block;
+    min-width: 120px;
+    border-bottom: 2px solid #3498db;
+    text-align: center;
+    color: #3498db;
+    font-weight: 600;
+  }
+  
+  .test-word {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+  }
+  
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .options-grid, .language-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .images-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .test-ingresso-container {
+      padding: 1.5rem;
+    }
+  }

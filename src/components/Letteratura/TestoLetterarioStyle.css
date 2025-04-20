@@ -1,0 +1,875 @@
+/* src/components/Letteratura/TestoLetterarioStyle.css */
+.testo-letterario-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #CCAA00;
+}
+
+.testo-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.testo-titolo {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+}
+
+.testo-autore {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 0 0 15px 0;
+  color: #555;
+}
+
+.testo-meta {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.testo-tabs {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.tab-btn.active {
+  color: #CCAA00;
+  font-weight: 500;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #CCAA00;
+}
+
+.testo-content {
+  padding: 20px 0;
+}
+
+.poesia-text {
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.prosa-text {
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  text-align: justify;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.testo-analisi h3 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.temi-list, .figure-list {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.temi-list li, .figure-list li {
+  margin-bottom: 8px;
+}
+
+.parole-chiave {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.parola-tag {
+  background-color: #f0f0e8;
+  color: #333;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.testo-esercizi {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.esercizio {
+  margin-bottom: 25px;
+}
+
+.esercizio-domanda {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.esercizio-risposta {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+/* Stili per l'evidenziazione delle figure retoriche */
+.highlight-metafora {
+  background-color: rgba(255, 200, 200, 0.4);
+  cursor: help;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.highlight-similitudine {
+  background-color: rgba(200, 255, 200, 0.4);
+  cursor: help;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.highlight-ossimoro {
+  background-color: rgba(200, 200, 255, 0.4);
+  cursor: help;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.highlight-sinestesia {
+  background-color: rgba(255, 255, 200, 0.4);
+  cursor: help;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.highlight-enjambement {
+  background-color: rgba(255, 200, 255, 0.4);
+  cursor: help;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.highlight-anafora {
+  background-color: rgba(200, 255, 255, 0.4);
+  cursor: help;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.highlight-iperbole {
+  background-color: rgba(255, 230, 200, 0.4);
+  cursor: help;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.highlight-chiasmo {
+  background-color: rgba(230, 200, 255, 0.4);
+  cursor: help;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.highlight-metonimia {
+  background-color: rgba(200, 230, 255, 0.4);
+  cursor: help;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.highlight-sineddoche {
+  background-color: rgba(230, 255, 200, 0.4);
+  cursor: help;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.highlight-paronomasia {
+  background-color: rgba(255, 220, 220, 0.4);
+  cursor: help;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.highlight-anastrofe {
+  background-color: rgba(220, 220, 255, 0.4);
+  cursor: help;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.testo-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.highlight-toggle, .help-toggle {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.highlight-toggle.active, .help-toggle.active {
+  background-color: #CCAA00;
+  color: #333;
+  border-color: #CCAA00;
+}
+
+/* Stili per il componente interattivo */
+.figure-retoriche-interactive {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.game-controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.punteggio-display {
+  background-color: #CCAA00;
+  color: #333;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.punteggio-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.difficulty-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.difficulty-selector select {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.instruction {
+  background-color: #f0f0e8;
+  padding: 10px;
+  border-radius: 5px;
+  border-left: 3px solid #CCAA00;
+  margin-bottom: 20px;
+}
+
+.interactive-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-selection-area {
+  position: relative;
+}
+
+.poesia-text.interactive {
+  cursor: text;
+  border: 1px solid #e0e0e0;
+}
+
+.figure-selection {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.figure-selection h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.selected-text-info {
+  background-color: #f0f0e8;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.figure-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.figura-btn {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.figura-btn:hover {
+  background-color: #CCAA00;
+  border-color: #CCAA00;
+}
+
+.feedback-message {
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.feedback-message.correct {
+  background-color: #d4edda;
+  color: #155724;
+  border-left: 3px solid #155724;
+}
+
+.feedback-message.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 3px solid #721c24;
+}
+
+.figure-results {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.results-header h4 {
+  margin: 0;
+}
+
+.identified-figures {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.identified-figures li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-right: 25px;
+}
+
+.correct-figure {
+  color: #155724;
+}
+
+.incorrect-figure {
+  color: #721c24;
+  text-decoration: line-through;
+}
+
+.check-icon, .wrong-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.check-icon {
+  color: #155724;
+}
+
+.wrong-icon {
+  color: #721c24;
+}
+
+.figura-tipo {
+  font-weight: 500;
+}
+
+.figura-testo {
+  margin-left: 5px;
+  font-style: italic;
+}
+
+.aiuti-section {
+  margin-top: 20px;
+  background-color: #f0f0e8;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.aiuti-section h5 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.aiuti-list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.aiuto-item {
+  margin-bottom: 8px;
+}
+
+.aiuto-figura {
+  font-weight: 500;
+}
+
+.aiuto-definizione {
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+
+.test-completato {
+  margin-top: 20px;
+  background-color: #d4edda;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.test-completato h4 {
+  margin-top: 0;
+  color: #155724;
+}
+
+.confronti-section {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.confronti-section h5 {
+  margin-bottom: 15px;
+}
+
+.confronti-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.confronto-item {
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.confronto-esempio {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-left: 3px solid #CCAA00;
+  font-style: italic;
+}
+
+.confronto-spiegazione {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.restart-btn {
+  margin-top: 20px;
+}
+
+.check-all-btn {
+  align-self: center;
+  margin-top: 20px;
+}
+
+/* Stili per il laboratorio creativo */
+.crea-figure-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.lab-description {
+  background-color: #e8e0d0;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 4px solid #CCAA00;
+}
+
+.creazione-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-section select,
+.form-section textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.figura-info {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.figura-info h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.esempio-modello {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.submit-creation {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.submit-creation:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Stili per la sezione sfida */
+.sfida-section {
+  margin-top: 30px;
+}
+
+.sfida-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.sfida-tab {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.sfida-tab:hover {
+  color: #333;
+}
+
+.sfida-tab.active {
+  border-bottom-color: #CCAA00;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Stili per le mie creazioni */
+.creazione-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.creazione-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.creazione-figura {
+  margin: 0;
+  color: #333;
+}
+
+.creazione-stats {
+  display: flex;
+  gap: 15px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.star-icon {
+  color: #CCAA00;
+}
+
+.creazione-esempio {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 3px solid #CCAA00;
+  margin: 0 0 15px 0;
+  font-style: italic;
+}
+
+.creazione-spiegazione {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.creazione-feedback h5 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.feedback-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.feedback-item {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.feedback-rating {
+  color: #CCAA00;
+  margin-bottom: 5px;
+}
+
+.feedback-comment {
+  margin: 0;
+  font-style: italic;
+  color: #666;
+}
+
+.no-feedback, .no-creazioni {
+  color: #666;
+  font-style: italic;
+}
+
+/* Stili per valutazione creazioni */
+.valutazione-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.creazione-author {
+  font-style: italic;
+  color: #666;
+}
+
+.valutazione-form {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.valutazione-form h5 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.star-btn.active {
+  color: #CCAA00;
+}
+
+.valutazione-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.skip-btn {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Stili per la classifica */
+.filter-options {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.filter-options select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.classifica-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.classifica-item {
+  display: flex;
+  align-items: stretch;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.posizione {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #CCAA00;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0 15px;
+  min-width: 50px;
+}
+
+.classifica-content {
+  flex: 1;
+  padding: 15px;
+}
+
+.classifica-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.classifica-header h4 {
+  margin: 0;
+}
+
+.classifica-rating {
+  color: #CCAA00;
+  font-weight: 500;
+}
+
+.classifica-author {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .sfida-tabs {
+    flex-direction: column;
+    border-bottom: none;
+  }
+  
+  .sfida-tab {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  
+  .sfida-tab.active {
+    background-color: #CCAA00;
+    color: white;
+    border-color: #CCAA00;
+  }
+  
+  .valutazione-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .skip-btn, .submit-rating {
+    width: 100%;
+  }
+}

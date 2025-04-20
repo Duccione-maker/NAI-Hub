@@ -1,0 +1,55 @@
+/* src/components/TeacherAccess/TeacherAccessLink.css */
+
+.teacher-access-link {
+    position: fixed;
+    bottom: 80px; /* Cambiato da 20px a 80px per evitare sovrapposizioni */
+    right: 20px;
+    z-index: 100;
+  }
+  
+  .admin-link {
+    display: flex;
+    align-items: center;
+    background-color: rgba(204, 170, 0, 0.8);
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .admin-link:hover {
+    background-color: rgba(204, 170, 0, 1);
+    transform: translateY(-2px);
+  }
+  
+  .admin-icon {
+    font-size: 1.3rem;
+    margin-right: 8px;
+  }
+  
+  .admin-text {
+    font-weight: 500;
+  }
+  
+  /* Stile per dispositivi mobili */
+  @media (max-width: 768px) {
+    .teacher-access-link {
+      bottom: 75px; /* Modificato per mobile */
+      right: 15px;
+    }
+    
+    .admin-link {
+      padding: 6px 10px;
+    }
+    
+    .admin-icon {
+      font-size: 1.1rem;
+      margin-right: 6px;
+    }
+    
+    .admin-text {
+      font-size: 0.9rem;
+    }
+  }

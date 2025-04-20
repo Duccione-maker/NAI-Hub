@@ -1,0 +1,179 @@
+.navbar {
+  background-color: 
+#CCAA00 !important; /* Giallo canarino scuro per lo sfondo /
+  color: 
+#333333; / Testo scuro per leggibilità */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(102, 83, 0, 0.3);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: 
+#333333; /* Testo scuro per leggibilità */
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: 
+#333333;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 1rem;
+}
+
+.nav-links a {
+  color: 
+#333333; /* Testo scuro per leggibilità */
+  text-decoration: none;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
+.nav-links a:hover {
+  background-color: 
+#E31717; /* Rosso per hover /
+  color: white; / Testo bianco su sfondo rosso per leggibilità */
+}
+
+.link-icon {
+  margin-right: 0.5rem;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin-right: 0.8rem;
+}
+
+.user-name {
+  font-weight: 500;
+  color: 
+#333333;
+}
+
+.user-level {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  color: 
+#333333;
+}
+
+.user-avatar {
+  font-size: 1.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(51, 51, 51, 0.2);
+  border-radius: 50%;
+}
+
+.login-button {
+  background-color: 
+#E31717; /* Rosso per coerenza con hover */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: 
+#C41414; /* Rosso più scuro per hover */
+}
+
+/* Responsive design per dispositivi mobili */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: 
+#CCAA00; /* Stesso giallo canarino della navbar */
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    margin-left: 0;
+    z-index: 100;
+  }
+
+  .navbar-menu.open {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 0.8rem;
+  }
+
+  .user-info {
+    display: none;
+  }
+}

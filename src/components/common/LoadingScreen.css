@@ -1,0 +1,48 @@
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .loading-container {
+    text-align: center;
+  }
+  
+  .loading-mountain {
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(135deg, #e0e0e0 0%, #a0a0a0 100%);
+    clip-path: polygon(0% 100%, 30% 30%, 50% 0%, 70% 30%, 100% 100%);
+    position: relative;
+    margin: 0 auto 20px;
+  }
+  
+  .loading-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30%;
+    width: 100%;
+    background: linear-gradient(90deg, #4a90e2 0%, #63b3ed 100%);
+    animation: climb 2s infinite ease-in-out;
+  }
+  
+  .loading-text {
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  @keyframes climb {
+    0% {
+      height: 0%;
+    }
+    50% {
+      height: 50%;
+    }
+    100% {
+      height: 0%;
+    }
+  }

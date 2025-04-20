@@ -1,0 +1,530 @@
+/* Stili generali per la piattaforma educativa */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Segoe UI', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.App-header, .app-header {
+  background-color: #2a4b85;
+  padding: 30px 0;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.App-header h1, .app-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.App-header p, .app-header p {
+  margin: 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* Navigation */
+.App-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.nav-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-button.active {
+  background-color: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 0 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer */
+footer {
+  background-color: #33333f;
+  color: white;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Loading screen */
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #2a4b85;
+  background-color: #f0f2f5;
+}
+
+.loading-screen:after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border: 4px solid #2a4b85;
+  border-radius: 50%;
+  border-top-color: transparent;
+  margin-left: 15px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Stili per Fontawesome */
+.fa {
+  margin-right: 5px;
+}
+
+/* Stile di default delle icone */
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: auto;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+/* Classi comuni per icone */
+.fa {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.fa-book:before {
+  content: "\f02d";
+}
+
+.fa-pen:before {
+  content: "\f304";
+}
+
+.fa-microphone:before {
+  content: "\f130";
+}
+
+.fa-play:before {
+  content: "\f04b";
+}
+
+.fa-stop:before {
+  content: "\f04d";
+}
+
+.fa-spinner:before {
+  content: "\f110";
+}
+
+.fa-circle:before {
+  content: "\f111";
+}
+
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: "\f071";
+}
+
+.fa-check-circle:before {
+  content: "\f058";
+}
+
+.fa-plus-circle:before {
+  content: "\f055";
+}
+
+.fa-award:before {
+  content: "\f559";
+}
+
+.fa-image:before {
+  content: "\f03e";
+}
+
+.fa-volume-up:before {
+  content: "\f028";
+}
+
+.fa-check:before {
+  content: "\f00c";
+}
+
+/* Animazione per lo spinner */
+.fa-spin {
+  animation: fa-spin 2s infinite linear;
+}
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Stili comuni per pulsanti */
+.primary-btn, .secondary-btn {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #4a6da7;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #2a4b85;
+}
+
+.secondary-btn {
+  background-color: #e2e8f0;
+  color: #333;
+}
+
+.secondary-btn:hover {
+  background-color: #cbd5e0;
+}
+
+.primary-btn:disabled, .secondary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Stili per card e pannelli */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  margin: 0;
+  color: #2a4b85;
+  font-size: 1.5rem;
+}
+
+/* Media query per responsive */
+@media (max-width: 768px) {
+  .App-header h1, .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .App-header p, .app-header p {
+    font-size: 1rem;
+  }
+  
+  .main-content {
+    padding: 0 10px 20px;
+  }
+  
+  .App-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .nav-button {
+    width: 80%;
+  }
+  
+  .audio-section {
+    flex-direction: column;
+  }
+}
+.app-footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.compliance-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Aumentato lo spazio tra i link */
+  margin-bottom: 15px;
+}
+
+.compliance-links a {
+  color: #4a90e2;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  font-weight: 500;
+}
+
+.compliance-links a:hover {
+  background-color: #e2e8f0;
+  text-decoration: underline;
+}
+
+.ministry-compliance {
+  text-align: center;
+  color: #718096;
+  font-size: 0.85rem;
+}
+/* Tema Karate per App.css */
+:root {
+  --dojo-white: #f7f7f7;
+  --dojo-off-white: #f0f0e8;
+  --dojo-black: #333333;
+  --dojo-red: #ba2c2c;
+  --dojo-beige: #e8e0d0;
+  --wood-dark: #8b5a2b;
+  --wood-light: #cd853f;
+  --tatami-green: #5b8a72;
+  --belt-white: #ffffff;
+  --belt-yellow: #f8dc3c;
+  --belt-orange: #f39c12;
+  --belt-green: #27ae60;
+  --belt-blue: #3498db;
+  --belt-brown: #8b4513;
+  --belt-black: #2c3e50;
+}
+
+body {
+  background-color: var(--dojo-off-white);
+  font-family: 'Roboto', sans-serif;
+  color: var(--dojo-black);
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  .app {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--dojo-off-white); /* Solo questo, senza background-image */
+  }/* Aggiungi una texture di carta giapponese */
+}
+
+/* Bordo tipo pergamena giapponese */
+.main-content {
+  background-color: var(--dojo-white);
+  border: 1px solid #d1d1c2;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  margin: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Aggiungi un elemento decorativo in stile giapponese all'inizio delle sezioni */
+.section-title::before {
+  content: "⛩️"; /* Torii giapponese */
+  margin-right: 10px;
+}
+
+/* Stile per i pulsanti */
+.kai-button {
+  background-color: var(--dojo-red);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.kai-button:hover {
+  background-color: #a12525;
+  transform: translateY(-2px);
+}
+
+.kai-button:active {
+  transform: translateY(1px);
+}
+
+/* Schede stile tatami */
+.tatami-card {
+  background-color: var(--dojo-beige);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--tatami-green);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress bar in stile cintura */
+.belt-progress {
+  height: 15px;
+  background-color: var(--belt-white);
+  border-radius: 10px;
+  margin: 15px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.belt-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, var(--belt-white), var(--belt-yellow), var(--belt-orange), var(--belt-green), var(--belt-blue), var(--belt-brown), var(--belt-black));
+  transition: width 0.5s ease;
+}
+
+/* Navbar in stile dojo */
+.navbar {
+  background-color: var(--dojo-black);
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Footer in stile dojo */
+.app-footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #000000; /* Nero pece */
+  color: white;
+  border-top: 3px solid var(--dojo-red);
+}
+
+.compliance-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+
+.compliance-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  font-weight: 500;
+}
+
+.compliance-links a:hover {
+  background-color: var(--dojo-red);
+}
+
+.ministry-compliance {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.85rem;
+}
+@keyframes karate-chop {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  5% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  95% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.section-transition {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-transition::before {
+  content: "👊";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 2rem;
+  animation: karate-chop 1s ease-in-out;
+  z-index: 10;
+}
