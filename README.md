@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# NAI-Hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NAI-Hub è una piattaforma di apprendimento dell'italiano che utilizza intelligenza artificiale per personalizzare l'esperienza educativa.
 
-## Available Scripts
+## Caratteristiche Principali
 
-In the project directory, you can run:
+- **Test di livello adattivo**: Valuta il livello di conoscenza dell'italiano degli studenti
+- **Lettura assistita**: Testi di vari livelli con supporto AI per la comprensione
+- **Esercizi di scrittura**: Pratica di scrittura con feedback AI intelligente
+- **Dashboard personalizzata**: Monitoraggio dei progressi e suggerimenti di apprendimento
 
-### `npm start`
+## Struttura del Progetto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Il progetto è organizzato con una struttura modulare che separa chiaramente frontend e backend:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+nai-hub/
+├── client/                    # Frontend React
+│   └── src/
+│       ├── components/        # Componenti UI divisi per funzionalità
+│       ├── hooks/             # Custom React hooks
+│       ├── services/          # Servizi API modulari
+│       └── contexts/          # Context API per stato globale
+│
+├── server/                    # Backend Express
+│   ├── routes/                # Router Express organizzati per dominio
+│   └── db.json                # Database JSON (solo per sviluppo)
+```
 
-### `npm test`
+## Requisiti
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js 16.x o superiore
+- NPM 7.x o superiore
 
-### `npm run build`
+## Installazione
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clona il repository:
+   ```
+   git clone https://github.com/Duccione-maker/NAI-Hub.git
+   cd NAI-Hub
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Installa le dipendenze:
+   ```
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Avvia l'applicazione in modalità sviluppo:
+   ```
+   npm start
+   ```
 
-### `npm run eject`
+Questo avvierà sia il server API (porta 3001) che l'applicazione React (porta 3000).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Script Disponibili
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `npm start` - Avvia l'applicazione completa (server + client)
+- `npm run client` - Avvia solo il client React
+- `npm run server` - Avvia solo il server Express
+- `npm run build` - Crea la build di produzione del client
+- `npm run lint` - Esegue ESLint sul codice
+- `npm run lint:fix` - Corregge automaticamente i problemi di linting
+- `npm run format` - Formatta il codice con Prettier
+- `npm test` - Esegue i test
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Architettura
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Frontend
+Il frontend è costruito con React e utilizza un approccio modulare:
 
-## Learn More
+- **Context API** per la gestione globale dello stato dell'applicazione
+- **Custom Hooks** per la logica riutilizzabile
+- **Servizi API** per l'incapsulamento delle chiamate al backend
+- **Componenti organizzati per feature** per una migliore manutenibilità
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Backend
+Il backend è un server Express che fornisce API per:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Gestione utenti e profili
+- Recupero e valutazione di testi di lettura
+- Analisi delle risposte degli utenti con AI
+- Suggerimenti personalizzati di apprendimento
 
-### Code Splitting
+Il database usa JSON-server per lo sviluppo, ma è predisposto per una facile migrazione a un database più robusto in produzione.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Testing
+I test sono implementati con Jest e React Testing Library. Per eseguire i test:
 
-### Analyzing the Bundle Size
+```
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contribuire
+Le contribuzioni sono benvenute! Per contribuire:
 
-### Making a Progressive Web App
+1. Fai una fork del repository
+2. Crea un branch per la tua feature (`git checkout -b feature/amazing-feature`)
+3. Commit dei tuoi cambiamenti (`git commit -m 'Aggiungi una feature'`)
+4. Push al branch (`git push origin feature/amazing-feature`)
+5. Apri una Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Roadmap
 
-### Advanced Configuration
+- [ ] Aggiunta di TypeScript per type safety
+- [ ] Implementazione di un vero database
+- [ ] Miglioramento del feedback AI per le esercitazioni di scrittura
+- [ ] Aggiunta di esercizi di ascolto
+- [ ] Implementazione di un sistema di autenticazione
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Licenza
+Questo progetto è distribuito sotto licenza MIT.

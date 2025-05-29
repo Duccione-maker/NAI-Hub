@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 // src/services/progressService.js
 /**
  * Service per gestire il progresso degli studenti per l'accesso alla sezione Letteratura

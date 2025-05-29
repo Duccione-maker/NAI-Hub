@@ -1,0 +1,50 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "Studente",
+        "level": "A1",
+        "progress": 0,
+        "lastLogin": "2025-04-21T10:00:00.000Z",
+        "lastUpdate": "2025-04-21T10:00:00.000Z"
+      }
+    ],
+    "texts": [
+      {
+        "id": 1,
+        "title": "Mi presento",
+        "content": "Ciao! Mi chiamo Maria e sono italiana. Ho venticinque anni e vivo a Roma. Mi piace leggere libri e ascoltare musica. Studio all'università e lavoro part-time in un bar. Il fine settimana vado spesso al cinema con i miei amici. E tu, come ti chiami? Di dove sei?",
+        "level": "A1",
+        "type": "reading",
+        "summary": "Una semplice presentazione personale",
+        "createdAt": "2025-04-01T09:00:00.000Z"
+      },
+      {
+        "id": 2,
+        "title": "Una giornata in città",
+        "content": "Oggi ho passato la giornata in centro. Sono uscita di casa alle nove e ho preso l'autobus. Prima sono andata al mercato, dove ho comprato della frutta fresca. Poi ho visitato un museo interessante con una mostra di arte moderna. A mezzogiorno ho pranzato in un piccolo ristorante. Nel pomeriggio ho fatto shopping e ho preso un caffè con un'amica. Sono tornata a casa alle sei, un po' stanca ma felice.",
+        "level": "A2",
+        "type": "reading",
+        "summary": "Racconto di una giornata passata in città",
+        "createdAt": "2025-04-05T14:30:00.000Z"
+      },
+      {
+        "id": 3,
+        "title": "Il cambiamento climatico",
+        "content": "Il cambiamento climatico rappresenta una delle sfide più importanti del nostro tempo. Negli ultimi decenni, la temperatura media globale è aumentata a causa delle emissioni di gas serra prodotte dalle attività umane. Questo fenomeno sta provocando lo scioglimento dei ghiacciai, l'innalzamento del livello del mare e l'aumento di eventi meteorologici estremi come siccità e inondazioni. Per affrontare questa crisi, è necessario ridurre le emissioni di carbonio e promuovere fonti di energia rinnovabile. Inoltre, i governi di tutto il mondo dovrebbero collaborare per sviluppare politiche ambientali efficaci. Ognuno di noi può contribuire con piccole azioni quotidiane: utilizzare meno plastica, risparmiare energia e preferire i mezzi pubblici o la bicicletta per gli spostamenti.",
+        "level": "B1",
+        "type": "reading",
+        "summary": "Articolo sul cambiamento climatico e possibili soluzioni",
+        "createdAt": "2025-04-10T11:15:00.000Z"
+      }
+    ],
+    "progress": [
+      {
+        "id": 1682077200000,
+        "userId": 1,
+        "activity": "onboarding_test",
+        "score": 75,
+        "timestamp": "2025-04-21T10:00:00.000Z"
+      }
+    ]
+  }
