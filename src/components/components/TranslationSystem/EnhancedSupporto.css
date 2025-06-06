@@ -1,0 +1,442 @@
+/* EnhancedSupporto.css - Stili per il supporto linguistico avanzato */
+
+/* === CONTAINER PRINCIPALE === */
+.enhanced-supporto-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === INDICATORE STATO === */
+.translation-status {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 25px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+  z-index: 999;
+  transition: all 0.3s ease;
+  max-width: 300px;
+}
+
+.translation-status.active {
+  border-color: #4caf50;
+  background: linear-gradient(135deg, #f8fff8, #e8f5e8);
+}
+
+.translation-status.inactive {
+  border-color: #ffc107;
+  background: linear-gradient(135deg, #fffbf0, #fff3cd);
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.status-dot.active {
+  background: #4caf50;
+}
+
+.status-dot.inactive {
+  background: #ffc107;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.status-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.usage-hint {
+  font-size: 11px;
+  color: #6c757d;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+/* === WIDGET AVANZATO === */
+.enhanced-supporto-widget {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  max-height: 80vh;
+}
+
+/* === PANNELLO STATISTICHE === */
+.translation-stats-panel {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+  padding: 20px;
+  min-width: 280px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.translation-stats-panel h4 {
+  margin: 0 0 16px 0;
+  color: #4a6da7;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid #f8f9fa;
+  padding-bottom: 8px;
+}
+
+.translation-stats-panel h5 {
+  margin: 16px 0 8px 0;
+  color: #495057;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Sezione parole più usate */
+.most-used-section {
+  margin-bottom: 20px;
+}
+
+.words-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.word-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #4a6da7;
+}
+
+.word-stat .word {
+  font-weight: 500;
+  color: #495057;
+}
+
+.word-stat .count {
+  font-size: 12px;
+  color: #6c757d;
+  background: #e9ecef;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+/* Sezione dizionario personale */
+.personal-dict-section {
+  margin-bottom: 20px;
+}
+
+.dict-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dict-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f0f2f5;
+  border-radius: 6px;
+  border-left: 3px solid #f9a826;
+}
+
+.dict-item .word {
+  font-weight: 500;
+  color: #495057;
+}
+
+.dict-item .translation {
+  font-size: 12px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Controlli avanzati */
+.advanced-controls {
+  border-top: 1px solid #e9ecef;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.control-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #4a6da7, #7290c9);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+  background: linear-gradient(135deg, #2a4b85, #4a6da7);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(74, 109, 167, 0.3);
+}
+
+.control-btn:active {
+  transform: translateY(0);
+}
+
+/* === PULSANTE TRIGGER === */
+.enhanced-trigger-button {
+  background: linear-gradient(135deg, #4a6da7, #7290c9);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 20px rgba(74, 109, 167, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  font-weight: 500;
+}
+
+.enhanced-trigger-button:hover {
+  background: linear-gradient(135deg, #2a4b85, #4a6da7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(74, 109, 167, 0.4);
+}
+
+.enhanced-trigger-button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 15px rgba(74, 109, 167, 0.3);
+}
+
+.trigger-icon {
+  font-size: 18px;
+}
+
+.trigger-text {
+  font-size: 14px;
+}
+
+/* Badge statistiche */
+.stats-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #f9a826;
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  animation: badgePulse 2s infinite;
+}
+
+@keyframes badgePulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.enhanced-trigger-button.has-stats {
+  padding-right: 25px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .enhanced-supporto-container {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .translation-status {
+    top: 15px;
+    right: 15px;
+    max-width: 250px;
+    padding: 6px 12px;
+  }
+  
+  .enhanced-supporto-widget {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .translation-stats-panel {
+    min-width: 250px;
+    padding: 16px;
+  }
+  
+  .enhanced-trigger-button {
+    padding: 10px 16px;
+    border-radius: 40px;
+  }
+  
+  .trigger-icon {
+    font-size: 16px;
+  }
+  
+  .trigger-text {
+    font-size: 13px;
+  }
+  
+  .stats-badge {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .enhanced-supporto-container {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .translation-status {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+  
+  .usage-hint {
+    display: none; /* Nascondi su mobile per spazio */
+  }
+  
+  .translation-stats-panel {
+    min-width: 200px;
+    padding: 12px;
+  }
+  
+  .enhanced-trigger-button {
+    padding: 8px 12px;
+  }
+  
+  .trigger-text {
+    display: none; /* Solo icona su mobile */
+  }
+}
+
+/* === DARK MODE === */
+@media (prefers-color-scheme: dark) {
+  .enhanced-supporto-container {
+    color: white;
+  }
+  
+  .translation-status {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: white;
+  }
+  
+  .translation-status.active {
+    background: linear-gradient(135deg, #1a2f1a, #2d5a2d);
+    border-color: #4caf50;
+  }
+  
+  .translation-status.inactive {
+    background: linear-gradient(135deg, #2d2a1a, #5a4d2d);
+    border-color: #ffc107;
+  }
+  
+  .translation-stats-panel {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: white;
+  }
+  
+  .translation-stats-panel h4 {
+    color: #7290c9;
+    border-color: #4a5568;
+  }
+  
+  .word-stat {
+    background: #4a5568;
+    color: white;
+    border-color: #7290c9;
+  }
+  
+  .word-stat .count {
+    background: #718096;
+    color: white;
+  }
+  
+  .dict-item {
+    background: #4a5568;
+    color: white;
+    border-color: #f9a826;
+  }
+  
+  .advanced-controls {
+    border-color: #4a5568;
+  }
+}
+
+/* === ACCESSIBILITY === */
+.enhanced-trigger-button:focus,
+.control-btn:focus {
+  outline: 3px solid #f9a826;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enhanced-trigger-button:hover {
+    transform: none;
+  }
+  
+  .stats-badge {
+    animation: none;
+  }
+  
+  .status-dot {
+    animation: none;
+  }
+}
+
+/* === SCROLLBAR PERSONALIZZATO === */
+.translation-stats-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.translation-stats-panel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.translation-stats-panel::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.translation-stats-panel::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

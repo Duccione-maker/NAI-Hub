@@ -582,3 +582,628 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(204, 153, 0, 0.4);
 }
+/* CSS AGGIUNTIVO per Dashboard con Sistema Cinture */
+/* Aggiungi alla fine del file DashboardStyles.css esistente */
+
+/* CELEBRAZIONE CINTURA */
+.belt-celebration-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeInOverlay 0.5s ease-out;
+}
+
+.celebration-modal {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.celebration-modal::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+  animation: shimmer 3s linear infinite;
+}
+
+.celebration-fireworks {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  animation: bounce 1s ease-in-out infinite alternate;
+}
+
+.celebration-title {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.belt-display-large {
+  margin: 2rem 0;
+}
+
+.qcer-level-badge {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: inline-block;
+  margin: 1rem 0;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.celebration-message {
+  margin: 2rem 0;
+  line-height: 1.6;
+  color: #34495e;
+}
+
+.celebration-message p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.start-journey-btn {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+  margin-top: 1rem;
+}
+
+.start-journey-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+}
+
+/* HEADER DASHBOARD */
+.dashboard-header-section {
+  margin-bottom: 3rem;
+}
+
+.welcome-title {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* STATUS CINTURA ATTUALE */
+.current-belt-section {
+  margin: 2rem 0;
+}
+
+.belt-status-card {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+
+.belt-current-display {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.belt-icon-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.belt-info {
+  flex: 1;
+}
+
+.belt-name {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.qcer-badge {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.qcer-badge.small {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.belt-description {
+  color: #7f8c8d;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+/* PROGRESSIONE */
+.progression-section {
+  border-top: 1px solid #e9ecef;
+  padding-top: 1.5rem;
+}
+
+.next-belt-target {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.progression-arrow {
+  font-size: 1.5rem;
+  color: #3498db;
+  font-weight: bold;
+}
+
+.next-belt-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.belt-icon-small {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.next-belt-info h4 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+.progression-bar {
+  margin-top: 1rem;
+}
+
+.progress-track {
+  width: 100%;
+  height: 12px;
+  background: #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  transition: width 0.8s ease;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: progressShimmer 2s linear infinite;
+}
+
+.progress-text {
+  text-align: center;
+  margin-top: 0.8rem;
+  color: #7f8c8d;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* INVITO AL TEST */
+.test-invitation-card {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  margin: 2rem 0;
+  box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+}
+
+.invitation-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.invitation-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.test-invitation-card h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.test-invitation-card p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.invitation-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  margin-bottom: 2rem !important;
+}
+
+.test-cta-btn {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+}
+
+.test-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+}
+
+/* MIGLIORAMENTI SEZIONI ESISTENTI */
+.tatami-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.tatami-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+.percorso-info {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+}
+
+.current-focus {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.current-focus strong {
+  color: #3498db;
+}
+
+/* MEDAGLIE */
+.medals-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.medal-earned,
+.medal-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 100px;
+}
+
+.medal-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.medal-icon.locked {
+  background: #bdc3c7 !important;
+  color: #7f8c8d;
+}
+
+.medal-earned span,
+.medal-placeholder span {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.medal-earned span {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* PERGAMENA MIGLIORATA */
+.pergamena-container {
+  margin-top: 1rem;
+}
+
+.accesso-info {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.accesso-info p {
+  margin: 0;
+  color: #856404;
+  line-height: 1.6;
+}
+
+.progress-hint {
+  color: #e67e22 !important;
+  font-weight: 600;
+}
+
+.ready-hint {
+  color: #27ae60 !important;
+  font-weight: 600;
+}
+
+/* ANIMAZIONI */
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes beltGlow {
+  0% { box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+  100% { box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 20px rgba(255,215,0,0.5); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.02);
+  }
+}
+
+@keyframes progressShimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .celebration-modal {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .celebration-title {
+    font-size: 2rem;
+  }
+  
+  .belt-current-display {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .belt-icon-large {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+  
+  .next-belt-target {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .progression-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .welcome-title {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .test-invitation-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .test-cta-btn {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .medals-showcase {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .belt-status-card {
+    padding: 1.5rem;
+  }
+  
+  .celebration-modal {
+    padding: 1.5rem;
+  }
+  
+  .belt-name {
+    font-size: 1.5rem;
+  }
+  
+  .medal-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .tatami-card {
+    padding: 1.5rem;
+  }
+}
+
+/* CINTURE SPECIFICHE - Colori dinamici */
+.belt-yellow {
+  background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+  border: 3px solid #DAA520;
+}
+
+.belt-orange {
+  background: linear-gradient(135deg, #FFA500, #FF8C00) !important;
+  border: 3px solid #FF7F00;
+}
+
+.belt-green {
+  background: linear-gradient(135deg, #32CD32, #228B22) !important;
+  border: 3px solid #20B2AA;
+}
+
+.belt-blue {
+  background: linear-gradient(135deg, #4169E1, #0000CD) !important;
+  border: 3px solid #1E90FF;
+}
+
+.belt-brown {
+  background: linear-gradient(135deg, #8B4513, #A0522D) !important;
+  border: 3px solid #CD853F;
+}
+
+.belt-black {
+  background: linear-gradient(135deg, #2c3e50, #000000) !important;
+  border: 3px solid #34495e;
+}
+
+/* EFFETTI SPECIALI per cintura nera */
+.belt-black {
+  position: relative;
+  overflow: hidden;
+}
+
+.belt-black::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: masterShine 4s linear infinite;
+}
+
+@keyframes masterShine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* MIGLIORAMENTI ACCESSIBILITÀ */
+.belt-celebration-overlay:focus-within .celebration-modal {
+  outline: 3px solid #3498db;
+  outline-offset: 4px;
+}
+
+.start-journey-btn:focus,
+.test-cta-btn:focus {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* PRINT STYLES */
+@media print {
+  .belt-celebration-overlay {
+    display: none;
+  }
+  
+  .current-belt-section {
+    break-inside: avoid;
+  }
+  
+  .tatami-card {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+}
